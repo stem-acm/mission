@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <title>Mission: STEM Club</title>
+  <meta name="description" content="A small retro 2D game: explore the STEM Club campus and discover what the club is, its vision, its goal and its activities.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=13">
+</head>
+<body>
+  <div id="app">
+    <div id="stage">
+      <canvas id="screen" width="320" height="180"></canvas>
+
+      <div id="hud" class="hidden">
+        <div id="tracker"></div>
+        <button id="muteBtn" class="hud-btn" type="button" aria-label="Toggle sound">SND ON</button>
+      </div>
+
+      <div id="toast" class="hidden"></div>
+
+      <div id="dialog" class="hidden">
+        <div id="dialogName"></div>
+        <div id="dialogText"></div>
+        <div id="dialogChoices"></div>
+        <div id="dialogNext">&#9660;</div>
+        <button id="dialogClose" type="button" aria-label="Close dialog">&#10005;</button>
+      </div>
+
+      <div id="title">
+        <div class="t-small">STEM CLUB PRESENTS</div>
+        <h1>MISSION</h1>
+        <div class="t-sub">EXPLORE THE STEM CLUB CAMPUS</div>
+        <button id="startBtn" class="btn blink" type="button">&#9654; PRESS START</button>
+        <div class="t-help" id="titleHelp">ARROWS / WASD TO MOVE &middot; SPACE TO TALK</div>
+      </div>
+    </div>
+
+    <div id="touch" class="hidden">
+      <div id="dpad">
+        <button type="button" data-dir="up" class="pad up" aria-label="Up">&#9650;</button>
+        <button type="button" data-dir="left" class="pad left" aria-label="Left">&#9664;</button>
+        <button type="button" data-dir="right" class="pad right" aria-label="Right">&#9654;</button>
+        <button type="button" data-dir="down" class="pad down" aria-label="Down">&#9660;</button>
+      </div>
+      <button type="button" id="btnA" aria-label="Action">A</button>
+    </div>
+  </div>
+
+  <div id="puzzle" class="overlay hidden">
+    <div class="panel">
+      <div class="panel-head">
+        <h2 id="puzzleTitle"></h2>
+        <button id="puzzleExit" class="btn btn-ghost btn-small" type="button">EXIT &#10005;</button>
+      </div>
+      <p id="puzzleGoal"></p>
+      <div id="puzzleBody"></div>
+      <div id="puzzleMsg"></div>
+      <div id="puzzleHint" class="hidden"></div>
+      <div id="puzzleActions"></div>
+    </div>
+  </div>
+
+  <div id="ending" class="overlay hidden">
+    <div id="terminal"></div>
+    <div id="endcard" class="hidden">
+      <div class="ec-badge">&#9733; MISSION ACCEPTED &#9733;</div>
+      <h2>STEM CLUB</h2>
+      <p class="ec-tag">SCIENCE &middot; CREATIVITY &middot; THE DOER MINDSET</p>
+      <p class="ec-place">American Corner Mahajanga</p>
+      <a id="fbLink" class="btn" target="_blank" rel="noopener noreferrer">JOIN US ON FACEBOOK</a>
+      <button id="againBtn" class="btn btn-ghost" type="button">&#8634; PLAY AGAIN</button>
+    </div>
+  </div>
+
+  <script src="js/data.js?v=13"></script>
+  <script src="js/engine.js?v=13"></script>
+  <script src="js/world.js?v=13"></script>
+  <script src="js/puzzles.js?v=13"></script>
+  <script src="js/main.js?v=13"></script>
+</body>
+</html>
