@@ -164,7 +164,14 @@ PUZZLES.model = (() => {
       left.appendChild(api.el('div', 'pz-label', 'YOUR MODEL'));
       const iso = api.canvas(72, 68, 'iso');
       left.appendChild(iso);
-      left.appendChild(api.el('div', 'pz-small', 'BACK'));
+      // the tile grid with its four sides labelled (BACK, FRONT, LEFT, RIGHT)
+      const compass = api.el('div', 'compass');
+      compass.append(
+        api.el('div', 'pz-small side-back', 'BACK'),
+        api.el('div', 'pz-small side-left', 'LEFT'),
+        api.el('div', 'pz-small side-right', 'RIGHT'),
+        api.el('div', 'pz-small side-front', 'FRONT')
+      );
       const grid = api.el('div', 'grid3');
       const cells = [];
       for (let z = 0; z < 3; z++) {
@@ -182,8 +189,8 @@ PUZZLES.model = (() => {
           cells.push(b);
         }
       }
-      left.appendChild(grid);
-      left.appendChild(api.el('div', 'pz-small', 'FRONT'));
+      compass.appendChild(grid);
+      left.appendChild(compass);
 
       const right = api.el('div', 'pz-col');
       right.appendChild(api.el('div', 'pz-label', 'TARGET VIEWS'));
