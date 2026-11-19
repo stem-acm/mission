@@ -75,7 +75,7 @@ const DIALOGS = {
     ]
   },
   model: {
-    name: 'TIANA - 3D MODELLING LAB',
+    name: 'MANDRESY - 3D MODELLING LAB',
     lines: [
       'Welcome to the 3D Modelling Lab!',
       'Before we build anything, we design it in 3D on a computer.',
@@ -101,7 +101,7 @@ const DIALOGS = {
     outro: ['At STEM Club we wire real LEDs, motors and sensors, then bring them to life with code.']
   },
   code: {
-    name: 'HARDI - PROGRAMMING LAB',
+    name: 'ARDI - PROGRAMMING LAB',
     lines: [
       'Welcome to the Programming Lab!',
       'We learn to code, starting with the C language.',
